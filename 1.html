@@ -4,12 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #special {
+        color: blue;
+      }
+      li {
+        color: rgba(168, 110, 102, 0.666);
+      }
+      li {
+        color: red;
+      }
+    </style>
     <title>first</title>
   </head>
   <body>
-    <h1>HTML이란?</h1>
-    <div>
-      <p>마크업 언어로 웹페이지의 구조를 명확히 기술하는 언어이다.</p>
-    </div>
+    <ul>
+      <li>아메리카노</li>
+      <li>
+        차
+        <ul>
+          <li style="color: black" id="special">녹차</li>
+          <li>홍차</li>
+          <li>자스민차</li>
+        </ul>
+      </li>
+    </ul>
+
+    <form action=" " method="get">
+      이름 : <input type="text" name="st_name" /><br />
+      학번 : <input type="text" name="st_id" /><br />
+      학과 : <input type="text" name="department" /><br />
+      <input type="submit" />
+    </form>
+    <button type="button" onclick="alert('Hello World!')">
+      클릭해 보세요!
+    </button>
   </body>
 </html>
