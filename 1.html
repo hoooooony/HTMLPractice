@@ -5,39 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      #special {
-        color: blue;
+      .header {
+        background-color: red;
+        height: 60px;
+        padding-top: 30px;
       }
-      li {
-        color: rgba(168, 110, 102, 0.666);
+      .left {
+        display: inline-block;
+        background-color: blue;
+        height: calc(100vh - 100px);
+        width: 100px;
+        padding-top: 450px;
       }
-      li {
-        color: red;
+      .center {
+        display: inline-block;
+        background-color: rgb(0, 94, 128);
+        height: calc(100vh - 100px);
+        width: calc(100vw - 237px);
+        margin: 10px;
+        padding-top: 450px;
+      }
+      .right {
+        display: inline-block;
+        background-color: rgb(229, 255, 0);
+        height: calc(100vh - 100px);
+        width: 100px;
+        padding-top: 450px;
+      }
+      .footer {
+        background-color: rgb(0, 255, 247);
+        height: 40px;
+      }
+      body {
+        margin: 0px;
+        font-size: 20px;
+        text-align: center;
       }
     </style>
-    <title>first</title>
+    <title>성배 레이아웃</title>
   </head>
   <body>
-    <ul>
-      <li>아메리카노</li>
-      <li>
-        차
-        <ul>
-          <li style="color: black" id="special">녹차</li>
-          <li>홍차</li>
-          <li>자스민차</li>
-        </ul>
-      </li>
-    </ul>
-
-    <form action=" " method="get">
-      이름 : <input type="text" name="st_name" /><br />
-      학번 : <input type="text" name="st_id" /><br />
-      학과 : <input type="text" name="department" /><br />
-      <input type="submit" />
-    </form>
-    <button type="button" onclick="alert('Hello World!')">
-      클릭해 보세요!
-    </button>
+    <div class="header">header</div>
+    <span class="left">left</span><span class="center">center</span
+    ><span class="right">right</span>
+    <div class="footer">footer</div>
   </body>
 </html>
