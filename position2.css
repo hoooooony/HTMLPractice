@@ -1,0 +1,26 @@
+.head {
+  background-color: beige;
+}
+.title {
+  display: inline-block;
+  width: 100%;
+}
+.modifyButton {
+  position: absolute;
+  right: 0px;
+}
+.deleteButton {
+  position: absolute;
+  right: 0px;
+}
+.content {
+  margin: 5px;
+  position: relative;
+  background-color: bisque;
+  height: 400px;
+}
+.makeDay {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}

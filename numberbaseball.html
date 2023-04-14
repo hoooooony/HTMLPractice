@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자야구</title>
+    <link rel="stylesheet" href="numberbaseball.css" />
+  </head>
+  <body>
+    <h1>숫자야구 게임</h1>
+    <div class="optionBox">
+      <div class="option" id="three-number" onclick="inputMaxThree()">3개</div>
+      <div class="option" id="four-number" onclick="inputMaxFour()">4개</div>
+      <div class="option" id="five-number" onclick="inputMaxFive()">5개</div>
+    </div>
+    <div class="numberInputBox">
+      <input
+        type="number"
+        class="numberInput"
+        placeholder=" 숫자를 입력하시오"
+        max="999"
+        maxlength="3"
+        oninput="maxLengthCheck(this)"
+        onkeypress="if(event.keyCode==13){inputNumberPush();}"
+      />
+      <button class="inputCheck" onclick="inputNumberPush()">입력</button>
+    </div>
+    <div id="worring-box">
+      <div id="worring">같은 숫자를 입력하지 마시오.</div>
+    </div>
+
+    <div class="resultBox">
+      <div class="guide">
+        <div class="order">순서</div>
+        <div class="number">숫자</div>
+        <div class="result">결과</div>
+      </div>
+      <div class="textZone">
+        <div class="orderText"></div>
+        <div class="numberText"></div>
+        <div class="resultText"></div>
+      </div>
+    </div>
+    <div class="check">
+      <div id="answer-box">정답</div>
+      <div id="reset" onclick="resetGame()">초기화</div>
+    </div>
+  </body>
+  <script src="numberbaseball.js"></script>
+</html>

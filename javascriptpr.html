@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 연습</title>
+  </head>
+  <body>
+    <span id="text"></span>
+    10 / 2
+    <p>
+      <input type="button" value="로그인" onclick="clearInput()" />
+    </p>
+    <p>
+      <input type="text" id="id" placeholder="ID" />
+    </p>
+    <p>
+      <input type="password" id="pw" />
+    </p>
+
+    <div id="exam"></div>
+  </body>
+  <script>
+    let B = "span";
+    let spanTextZone = document.getElementById("text");
+    let idInput = document.getElementById("id");
+    let pwInput = document.getElementById("pw");
+    pwInput.placeholder = "PW";
+    function clearInput() {
+      idInput.value = "";
+      pwInput.value = "";
+    }
+
+    document.write(document.querySelector(".exam"));
+    spanTextZone.innerText = document.querySelector(".exam");
+    spanTextZone.innerText = B;
+
+    document.write(10 / 2);
+    document.write("<br/>");
+    var A = 10;
+    A = 20;
+    document.write(A);
+  </script>
+</html>
