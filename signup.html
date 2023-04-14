@@ -15,7 +15,12 @@
       }
       .signin-link,
       .signup-link {
-        color: rgb(242, 242, 242);
+        color: azure;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
     </style>
   </head>
@@ -24,16 +29,20 @@
       <a class="navbar-brand" href="#">회원가입 페이지</a>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="signin-link" href="#">회원가입</a>
+          <a class="signin-link" href="https://hoooooony.github.io/signup.html"
+            >회원가입</a
+          >
         </li>
         <li class="nav-item">
-          <a class="signup-link" href="#">로그인</a>
+          <a class="signup-link" href="https://hoooooony.github.io/signin.html"
+            >로그인</a
+          >
         </li>
       </ul>
     </nav>
     <div class="container mt-5">
       <h1>회원가입</h1>
-      <form>
+      <form onsubmit="return false;">
         <div class="form-group">
           <label for="id">ID</label>
           <input
@@ -41,7 +50,9 @@
             class="form-control"
             id="id"
             placeholder="ID를 입력하세요"
+            onblur="emailCheck()"
           />
+          <div id="email-check">###@##.com형식을 지켜주세요</div>
         </div>
         <div class="form-group">
           <label for="pw">Password</label>
@@ -59,12 +70,14 @@
             class="form-control"
             id="pw-check"
             placeholder="비밀번호를 다시 입력하세요"
+            onblur="pwCheck()"
           />
+          <div id="pw-check-box">동일한 비밀번호를 작성해주세요.</div>
         </div>
         <div class="form-group">
           <label for="student-number">학번</label>
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="student-number"
             placeholder="학번을 입력하세요"
@@ -73,13 +86,13 @@
         <div class="form-group">
           <label for="maior">전공</label>
           <select class="form-control" id="maior">
-            <option>전공을 선택하세요</option>
-            <option>컴퓨터공학부</option>
-            <option>전자공학과</option>
-            <option>건축공학과</option>
-            <option>디자인공학과</option>
-            <option>기계공학부</option>
-            <option>응용화학공학부</option>
+            <option value="option0">전공을 선택하세요</option>
+            <option value="option1">컴퓨터공학부</option>
+            <option value="option2">전자공학과</option>
+            <option value="option3">건축공학과</option>
+            <option value="option4">디자인공학과</option>
+            <option value="option5">기계공학부</option>
+            <option value="option6">응용화학공학부</option>
           </select>
         </div>
         <div class="form-group">
@@ -105,5 +118,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="signup.js"></script>
   </body>
 </html>
