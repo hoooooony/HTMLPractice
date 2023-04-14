@@ -81,13 +81,14 @@
             class="form-control"
             id="student-number"
             placeholder="학번을 입력하세요"
-            onblur="selectOption()"
+            onchange="selectOption()"
           />
+          <div id="student-number-check">학번은 10자리입니다.</div>
         </div>
         <div class="form-group">
           <label for="maior">전공</label>
           <select class="form-control" id="maior">
-            <option value="option0">전공을 선택하세요</option>
+            <option value="0">전공을 선택하세요</option>
             <option value="1">기계공학부</option>
             <option value="2">산업경영학부</option>
             <option value="3">컴퓨터공학부</option>
@@ -106,7 +107,9 @@
             class="form-control"
             id="phone-number"
             placeholder="전화번호를 입력하세요"
+            onchange="changePhoneNumber()"
           />
+          <div id="Phone-number-check">숫자만 입력하시오</div>
         </div>
         <button type="submit" class="btn btn-primary">회원가입</button>
         <button type="reset" class="btn btn-dark">취소</button>
